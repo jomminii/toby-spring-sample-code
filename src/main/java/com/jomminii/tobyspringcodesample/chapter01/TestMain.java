@@ -1,5 +1,6 @@
 package com.jomminii.tobyspringcodesample.chapter01;
 
+import com.jomminii.tobyspringcodesample.chapter01.user.dao.NUserDao;
 import com.jomminii.tobyspringcodesample.chapter01.user.dao.UserDao;
 import com.jomminii.tobyspringcodesample.chapter01.user.domain.User;
 import java.sql.SQLException;
@@ -7,7 +8,7 @@ import java.sql.SQLException;
 public class TestMain {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        UserDao dao = new UserDao();
+        UserDao dao = new NUserDao();
 
         User user = new User();
         user.setId("testId");

@@ -2,12 +2,12 @@ package com.jomminii.tobyspringcodesample.chapter01.user.dao;
 
 import com.jomminii.tobyspringcodesample.chapter01.user.domain.User;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDao {
+public abstract class UserDao {
+
     public void add(User user) throws ClassNotFoundException, SQLException {
         Connection c = getConnection();
 
@@ -47,14 +47,5 @@ public class UserDao {
 
         return user;
     }
-
-    private static Connection getConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("org.mariadb.jdbc.Driver");
-
-        return DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/test",
-            "testId",
-            "password"
-        );
-    }
+    public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
 }
