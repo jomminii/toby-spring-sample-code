@@ -1,13 +1,13 @@
-package com.jomminii.tobyspringcodesample.chapter01;
+package com.jomminii.tobyspringcodesample.chapter01.three_divide_class;
 
-import com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.dao.NUserDao;
-import com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.domain.User;
+import com.jomminii.tobyspringcodesample.chapter01.three_divide_class.dao.UserDao;
+import com.jomminii.tobyspringcodesample.chapter01.three_divide_class.domain.User;
 import java.sql.SQLException;
 
 public class TestMain {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        NUserDao dao = new NUserDao();
+        UserDao dao = new UserDao();
 
         User user = new User();
         user.setId("testId");
