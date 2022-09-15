@@ -1,6 +1,6 @@
-package com.jomminii.tobyspringcodesample.chapter01.user.dao;
+package com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.dao;
 
-import com.jomminii.tobyspringcodesample.chapter01.user.domain.User;
+import com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.domain.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,6 +46,20 @@ public abstract class UserDao {
         c.close();
 
         return user;
+    }
+
+    public void delete() throws ClassNotFoundException, SQLException {
+        Connection c = getConnection();
+
+        PreparedStatement ps = c.prepareStatement(
+            "delete from users where id = 'testId';"
+        );
+
+        ps.executeUpdate();
+
+        ps.close();
+        c.close();
+
     }
     public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
 }

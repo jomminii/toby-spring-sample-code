@@ -1,20 +1,20 @@
 package com.jomminii.tobyspringcodesample.chapter01;
 
-import com.jomminii.tobyspringcodesample.chapter01.user.dao.NUserDao;
-import com.jomminii.tobyspringcodesample.chapter01.user.dao.UserDao;
-import com.jomminii.tobyspringcodesample.chapter01.user.domain.User;
+import com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.dao.NUserDao;
+import com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.domain.User;
 import java.sql.SQLException;
 
 public class TestMain {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        UserDao dao = new NUserDao();
+        NUserDao dao = new NUserDao();
 
         User user = new User();
         user.setId("testId");
         user.setName("테스트아이디");
         user.setPassword("password");
 
+        dao.delete();
         dao.add(user);
 
         System.out.println(user.getId() + " 등록 성공");

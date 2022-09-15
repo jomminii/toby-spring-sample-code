@@ -1,4 +1,4 @@
-package com.jomminii.tobyspringcodesample.chapter01.user.dao;
+package com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,8 +12,8 @@ public class NUserDao extends UserDao {
         Class.forName("org.mariadb.jdbc.Driver");
 
         return DriverManager.getConnection(
-            "jdbc:mysql://localhost:3306/test",
-            "testId",
+            "url",
+            "user",
             "password"
         );
 

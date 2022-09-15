@@ -1,4 +1,4 @@
-package com.jomminii.tobyspringcodesample.chapter01.user.domain;
+package com.jomminii.tobyspringcodesample.chapter01.three_using_inheritance.user.domain;
 
 public class User {
 
