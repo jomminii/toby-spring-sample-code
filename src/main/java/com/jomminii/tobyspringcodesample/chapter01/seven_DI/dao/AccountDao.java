@@ -1,0 +1,10 @@
+package com.jomminii.tobyspringcodesample.chapter01.seven_DI.dao;
+
+public class AccountDao {
+
+    private ConnectionMaker connectionMaker;
+
+    public AccountDao(ConnectionMaker connectionMaker) {
+        this.connectionMaker = connectionMaker;
+    }
+}
